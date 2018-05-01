@@ -1,0 +1,28 @@
+<resources>
+
+    <dimen name="list_item_background_corner_radius">10dp</dimen>
+    <dimen name="list_item_retweeted_background_corner_radius">6dp</dimen>
+    <dimen name="list_item_margin_horizontal">7dp</dimen>
+    <dimen name="list_item_margin_vertical">3dp</dimen>
+    <dimen name="list_item_element_spacing">14dp</dimen>
+    <dimen name="list_item_element_spacing_two_thirds">10dp</dimen>
+    <dimen name="list_item_element_spacing_one_third">5dp</dimen>
+    <dimen name="list_item_element_spacing_half">7dp</dimen>
+    <dimen name="list_item_retweeted_element_spacing">10dp</dimen>
+    <dimen name="list_item_retweeted_element_spacing_half">5dp</dimen>
+    <dimen name="list_item_text_spacing">5dp</dimen>
+    <dimen name="list_item_text_size">16dp</dimen>
+    <dimen name="list_item_screen_name_text_size">13dp</dimen>
+    <dimen name="list_item_name_text_size">14dp</dimen>
+    <dimen name="list_item_iinteraction_text_size">12dp</dimen>
+
+    <dimen name="home_avatar_height">65dp</dimen>
+    <dimen name="home_profile_text_bottom">12dp</dimen>
+    <dimen name="home_profile_text_top">25dp</dimen>
+    <dimen name="list_item_avatar_height">50dp</dimen>
+    <dimen name="list_item_avatar_height_half">25dp</dimen>
+    <dimen name="list_item_retweeted_avatar_height">30dp</dimen>
+
+    <dimen name="list_item_image_spacing">15dp</dimen>
+
+</resources>

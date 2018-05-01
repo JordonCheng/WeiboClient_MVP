@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Defalut color theme for Weibo home activity -->
+    <style name="WBHomeTheme.DefaultColorTheme" parent="Theme.AppCompat.Light">
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="android:colorPrimary">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="android:colorAccent">?attr/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+
+        <item name="pageBackground">?attr/colorPrimaryDark</item>
+        <item name="listItemRetweetedBackground">@color/list_item_retweeted_background</item>
+        <item name="listItemBackground">@color/list_item_background</item>
+
+        <item name="listItemContentHighlight">?attr/colorAccent</item>
+        <item name="listItemContent">@color/list_item_content</item>
+        <item name="listItemContentTextPrimary">@color/list_item_text_primary</item>
+        <item name="listItemContentTextPrimaryDark">?attr/listItemContent</item>
+        <item name="listItemContentTextDark">@color/list_item_text_dark</item>
+
+    </style>
+
+    <attr name="pageBackground" format="color" />
+    <attr name="listItemBackground" format="color" />
+    <attr name="listItemRetweetedBackground" format="color" />
+
+    <attr name="listItemContentHighlight" format="color" />
+    <attr name="listItemContent" format="color" />
+    <attr name="listItemContentTextPrimary" format="color" />
+    <attr name="listItemContentTextPrimaryDark" format="color" />
+    <attr name="listItemContentTextDark" format="color" />
+
+</resources>

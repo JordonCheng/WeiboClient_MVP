@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line_list_item_user_on_small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jordoncheng.smweibo.views.StatusAvatarImageView
+        android:id="@+id/line_list_item_avatar_on_small"
+        android:layout_width="@dimen/list_item_retweeted_avatar_height"
+        android:layout_height="@dimen/list_item_retweeted_avatar_height"
+        android:layout_marginEnd="@dimen/list_item_retweeted_element_spacing"/>
+    <TextView
+        android:id="@+id/line_list_item_screen_name_on_small"
+        android:textSize="@dimen/list_item_screen_name_text_size"
+        android:textStyle="bold"
+        android:layout_height="@dimen/list_item_retweeted_avatar_height"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textColor="?attr/listItemContentTextPrimary"
+        tools:ignore="SpUsage" />
+
+</LinearLayout>

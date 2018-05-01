@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dimen for Weibo home activity -->
+    <style name="WBHomeTheme.Dimen" parent="WBHomeTheme.DefaultColorTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="tabHeigth">?attr/actionBarSize</item>
+    </style>
+
+    <attr name="tabHeigth" format="dimension" />
+
+    <style name="Image" parent="WBHomeTheme.Dimen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="WindowTranslucent" parent="WBHomeTheme.Dimen">
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/list_item_element_spacing_half">
+
+    <com.jordoncheng.smweibo.models.InteractIcon
+        android:id="@+id/line_edit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/ic_image_black_24dp"
+        android:onClick="getImage"/>
+
+    <com.jordoncheng.smweibo.models.InteractIcon
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_toRightOf="@id/line_edit_image"
+        android:src="@mipmap/ic_at_24dp"
+        android:onClick="getAt"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/comment_button"
+        android:layout_width="@dimen/home_avatar_height"
+        android:layout_height="@dimen/list_item_avatar_height_half"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_alignParentRight="true"
+        android:text="@string/button_comment"
+        android:textColor="?attr/listItemContent"
+        android:background="@drawable/button_comment"
+        android:onClick="post"/>
+
+</RelativeLayout>

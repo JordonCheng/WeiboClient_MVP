@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SMWB</string>
+
+    <!-- 获取 Token -->
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+
+    <!-- OpenAPI -->
+    <string name="weibosdk_demo_access_token_is_empty">Access Token 不存在，请先登录</string>
+
+    <string name="reposts_count">转发&#160;</string>
+    <string name="comments_count">评论&#160;</string>
+    <string name="attitudes_count">点赞&#160;</string>
+    <string name="followers_count">粉丝</string>
+    <string name="friends_count">关注</string>
+    <string name="statuses_count">微博</string>
+    <string name="favourites_count">收藏</string>
+    <string name="name">@JordonCheng</string>
+    <string name="count">5</string>
+    <string name="edit_hint">写点什么</string>
+    <string name="button_comment">评论</string>
+
+    <string name="followers_count_en">followers</string>
+    <string name="friends_count_en">following</string>
+    <string name="statuses_count_en">reading</string>
+
+    <!--Activity Color-->
+    <string name="appbar_background">#36465d</string>
+    <string name="list_background">#263142</string>
+    <string name="select_cursor">#529ecc</string>
+
+</resources>

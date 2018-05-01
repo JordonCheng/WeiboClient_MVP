@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/authorize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重新登录测试" />
+
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="登录测试"/>
+
+    <Button
+        android:id="@+id/status_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="微博测试" />
+    <Button
+        android:id="@+id/status_button_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送页测试" />
+
+</LinearLayout>

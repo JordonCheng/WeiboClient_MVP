@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/list_item_avatar_height_half"
+                    android:layout_marginTop="@dimen/list_item_avatar_height_half">
+                    <com.jordoncheng.smweibo.views.StatusAvatarImageView
+                        android:id="@+id/home_user_avatar"
+                        android:layout_width="@dimen/home_avatar_height"
+                        android:layout_height="@dimen/home_avatar_height" />
+                    <TextView
+                        android:id="@+id/home_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/list_item_avatar_height_half"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_top"
+                        android:text="@string/name" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/list_item_element_spacing"
+                android:layout_marginBottom="@dimen/list_item_avatar_height_half"
+                android:layout_marginHorizontal="@dimen/list_item_avatar_height">
+                <LinearLayout
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/home_user_statuses_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_top"
+                        android:text="@string/count" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/statuses_count_en"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_bottom"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/home_user_friends_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_top"
+                        android:text="@string/count" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friends_count_en"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_bottom"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/home_user_followers_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_top"
+                        android:text="@string/count" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/followers_count_en"
+                        android:textColor="?attr/listItemBackground"
+                        android:textSize="@dimen/home_profile_text_bottom"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/tabHeigth"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/pageBackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>

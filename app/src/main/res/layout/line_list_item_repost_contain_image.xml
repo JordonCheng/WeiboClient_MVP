@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/list_item_retweeted_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/list_item_element_spacing" >
+        <include layout="@layout/line_list_item_user_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/list_item_retweeted_element_spacing"
+        android:layout_marginRight="@dimen/list_item_retweeted_element_spacing"
+        android:layout_marginBottom="@dimen/list_item_retweeted_element_spacing_half">
+        <include layout="@layout/line_list_item_text_content_on_repost" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/list_item_retweeted_element_spacing_half">
+        <include layout="@layout/line_list_item_image" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/list_item_retweeted_element_spacing">
+        <include layout="@layout/line_list_item_interaction_on_repost" />
+    </LinearLayout>
+
+</LinearLayout>

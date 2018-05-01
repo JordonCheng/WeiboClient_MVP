@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reposts_count"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+    <TextView
+        android:id="@+id/line_list_item_repost_count_on_repost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+
+    <View
+        android:layout_width="@dimen/list_item_retweeted_element_spacing"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comments_count"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+    <TextView
+        android:id="@+id/line_list_item_comments_count_on_repost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+
+    <View
+        android:layout_width="@dimen/list_item_retweeted_element_spacing"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attitudes_count"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+    <TextView
+        android:id="@+id/line_list_item_attitudes_count_on_repost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/listItemContentTextDark"
+        android:textSize="@dimen/list_item_iinteraction_text_size"/>
+
+</LinearLayout>
