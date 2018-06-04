@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/list_item_element_spacing_half">
+
+    <!--<com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_toEndOf="@id/line_edit_image"
+        android:src="@mipmap/ic_at_24dp"
+        android:onClick="getAt"/>-->
+
+    <TextView
+        android:id="@+id/line_edit_char_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_toStartOf="@id/line_edit_send"
+        android:textSize="@dimen/list_item_text_size"/>
+
+    <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
+        android:id="@+id/line_edit_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/ic_send_black_24dp"/>
+
+</RelativeLayout>

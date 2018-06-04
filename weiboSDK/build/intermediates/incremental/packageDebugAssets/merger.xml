@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Volumes/Development/Android/Exercise/WeiboClient_MVP/weiboSDK/src/main/assets"/><source path="/Volumes/Development/Android/Exercise/WeiboClient_MVP/weiboSDK/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Volumes/Development/Android/Exercise/WeiboClient_MVP/weiboSDK/src/debug/assets"/></dataSet></merger>
