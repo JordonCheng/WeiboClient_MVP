@@ -9,7 +9,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_alignParentLeft="true">
-        <com.jordoncheng.smweibo.models.InteractIcon
+        <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/list_item_element_spacing"
@@ -30,7 +30,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_toRightOf="@id/list_item_status_favorite">
-        <com.jordoncheng.smweibo.models.InteractIcon
+        <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/list_item_element_spacing"
@@ -47,7 +47,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_alignParentRight="true">
-        <com.jordoncheng.smweibo.models.InteractIcon
+        <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/list_item_element_spacing"

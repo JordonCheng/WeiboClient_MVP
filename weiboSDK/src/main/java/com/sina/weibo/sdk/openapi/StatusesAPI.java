@@ -18,6 +18,7 @@ package com.sina.weibo.sdk.openapi;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.SparseArray;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
@@ -74,6 +75,9 @@ public class StatusesAPI extends AbsOpenAPI {
     private static final int READ_API_COUNT               = 6;
     private static final int READ_API_PUBLIC_TIMELINE     = 7;
     private static final int READ_API_BILATERAL_TIMELINE  = 8;
+    private static final int WRITE_API_SHARE              = 9;
+    private static final int WRITE_API_UPLOAD             = 10;
+    private static final int WRITE_API_UPDATE             = 11;
 
     private static final SparseArray<String> sAPIList = new SparseArray<String>();
     static {
@@ -86,6 +90,9 @@ public class StatusesAPI extends AbsOpenAPI {
         sAPIList.put(READ_API_COUNT,              API_BASE_URL + "/upload_url_text.json");
         sAPIList.put(READ_API_PUBLIC_TIMELINE,    API_BASE_URL + "/public_timeline.json");
         sAPIList.put(READ_API_BILATERAL_TIMELINE, API_BASE_URL + "/bilateral_timeline.json");
+        sAPIList.put(WRITE_API_SHARE,             API_BASE_URL + "/share.json");
+        sAPIList.put(WRITE_API_UPLOAD,            API_BASE_URL + "/upload.json");
+        sAPIList.put(WRITE_API_UPDATE,            API_BASE_URL + "/update.json");
     }
 
     /**
@@ -249,6 +256,19 @@ public class StatusesAPI extends AbsOpenAPI {
         return requestSync(sAPIList.get(READ_API_HOME_TIMELINE), params, HTTPMETHOD_GET);
     }
 
+    public String publicTimelineSync(int count, int page, boolean base_app) {
+        WeiboParameters params =
+                buildPublicTimeLineParamsBase(count, page, base_app);
+        return requestSync(sAPIList.get(READ_API_PUBLIC_TIMELINE), params, HTTPMETHOD_GET);
+    }
+
+    public String bilateralTimelineSync(long since_id, long max_id, int count, int page, boolean base_app,
+                                  int featureType, boolean trim_user) {
+        WeiboParameters params =
+                buildHomeTimeLineParamsBase(since_id, max_id, count, page, base_app, featureType, trim_user);
+        return requestSync(sAPIList.get(READ_API_BILATERAL_TIMELINE), params, HTTPMETHOD_GET);
+    }
+
     public String userTimelineSync(long uid, String screen_name, long since_id, long max_id, int count, int page, boolean base_app, int featureType,
                                    boolean trim_user) {
         WeiboParameters params = buildUserTimeLineParamsBase(uid, screen_name, since_id, max_id, count, page, base_app,
@@ -288,13 +308,23 @@ public class StatusesAPI extends AbsOpenAPI {
         requestSync(sAPIList.get(READ_API_COUNT), params, HTTPMETHOD_GET);
     }
 
+    public String shareSync(String content, Uri uri) {
+        PostParameters params = buildShareParams(content, uri);
+        return doPostSync(sAPIList.get(WRITE_API_SHARE), params);
+    }
+
+    /*public String uploadSync(String content, Uri uri) {
+        PostParameters params = buildShareParams(content, uri);
+        return requestSync2(sAPIList.get(WRITE_API_UPLOAD), params, HTTPMETHOD_POST);
+    }*/
+
     /**
      * @see #update(String, String, String, RequestListener)
      */
-    /*public String updateSync(String content, String lat, String lon) {
+    public String updateSync(String content, String lat, String lon) {
         WeiboParameters params = buildUpdateParams(content, lat, lon);
         return requestSync(sAPIList.get(WRITE_API_UPDATE), params, HTTPMETHOD_POST);
-    }*/
+    }
 
     /**
      * @see #upload(String, Bitmap, String, String, RequestListener)
@@ -306,9 +336,7 @@ public class StatusesAPI extends AbsOpenAPI {
     }*/
 
     /**
-     * @see #uploadUrlText(String, String, String, String, String, RequestListener)
-     */
-    /*public String uploadUrlTextSync(String status, String imageUrl, String pic_id, String lat, String lon) {
+     */    /*public String uploadUrlTextSync(String status, String imageUrl, String pic_id, String lat, String lon) {
         WeiboParameters params = buildUpdateParams(status, lat, lon);
         params.put("url", imageUrl);
         params.put("pic_id", pic_id);
@@ -401,6 +429,14 @@ public class StatusesAPI extends AbsOpenAPI {
     private WeiboParameters buildShowParams(String ids) {
         WeiboParameters params = new WeiboParameters(mAppKey);
         params.put("ids", ids);
+
+        return params;
+    }
+
+    private PostParameters buildShareParams(String content, Uri uri) {
+        PostParameters params = new PostParameters(mAppKey);
+        params.put("status", content);
+        params.put("pic", uri);
 
         return params;
     }

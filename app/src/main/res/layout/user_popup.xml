@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_alignParentLeft="true">
-                    <com.jordoncheng.smweibo.views.StatusAvatarImageView
+                    <com.example.jordoncheng.weiboclient_mvp.view.widget.StatusAvatarImageView
                         android:id="@+id/list_item_avatar"
                         android:layout_width="@dimen/list_item_avatar_height"
                         android:layout_height="@dimen/list_item_avatar_height"

@@ -23,31 +23,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="@dimen/list_item_avatar_height_half"
-                    android:layout_marginTop="@dimen/list_item_avatar_height_half">
-                    <com.jordoncheng.smweibo.views.StatusAvatarImageView
+                    android:layout_margin="@dimen/list_item_avatar_height_half">
+                    <com.example.jordoncheng.weiboclient_mvp.view.widget.StatusAvatarImageView
                         android:id="@+id/home_user_avatar"
                         android:layout_width="@dimen/home_avatar_height"
-                        android:layout_height="@dimen/home_avatar_height" />
+                        android:layout_height="@dimen/home_avatar_height" /><!--
                     <TextView
                         android:id="@+id/home_user_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="@dimen/list_item_avatar_height_half"
+                        android:layout_marginLeft="@dimen/list_item_avatar_height_half_half"
                         android:textColor="?attr/listItemBackground"
-                        android:textSize="@dimen/home_profile_text_top"
-                        android:text="@string/name" />
+                        android:textSize="@dimen/home_profile_text_top" />-->
                 </LinearLayout>
             </FrameLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/list_item_element_spacing"
                 android:layout_marginBottom="@dimen/list_item_avatar_height_half"
                 android:layout_marginHorizontal="@dimen/list_item_avatar_height">
                 <LinearLayout
@@ -134,5 +132,13 @@
         android:layout_height="wrap_content"
         android:background="?attr/pageBackground"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/home_fab_margin"
+        app:srcCompat="@mipmap/ic_create_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

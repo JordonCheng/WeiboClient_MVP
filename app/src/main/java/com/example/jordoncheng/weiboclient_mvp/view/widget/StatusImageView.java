@@ -11,7 +11,7 @@ import android.view.View;
 
 public class StatusImageView extends ImageTagView {
 
-    public Bitmap srcBitmap;
+    private Bitmap srcBitmap;
     private Rect srcRect;
     private Rect dstRect;
     private Paint paint = new Paint();
@@ -40,7 +40,7 @@ public class StatusImageView extends ImageTagView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (srcBitmap != null && getVisibility() == View.VISIBLE && getMeasuredWidth() == getMeasuredHeight()) {
-            dstRect.right = getWidth();
+            dstRect.right = dstRect.bottom = getWidth();
             dstRect.bottom = getHeight();
             canvas.drawBitmap(srcBitmap, srcRect, dstRect, paint);
         }
@@ -63,5 +63,9 @@ public class StatusImageView extends ImageTagView {
             dstRect = new Rect();
         } else srcBitmap = null;
         super.setImageBitmap(bm);
+    }
+
+    public Bitmap getBitmap() {
+        return srcBitmap;
     }
 }

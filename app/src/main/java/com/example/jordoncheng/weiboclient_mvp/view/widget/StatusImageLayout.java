@@ -3,12 +3,19 @@ package com.example.jordoncheng.weiboclient_mvp.view.widget;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import java.io.File;
+import java.io.IOException;
+
+//使用步骤：先调用setImageCount设置图片的数量，再调用getChild获得ImageView来设置图片
+//设置图片必须调用setImageBitmap，不能使用setDrawable或者setImageUrl，否则图片宽高无法自适应
 
 public class StatusImageLayout extends LinearLayout {
 
@@ -37,6 +44,45 @@ public class StatusImageLayout extends LinearLayout {
 
     public int getImageCount() {
         return imageCount;
+    }
+
+
+    String path;
+    File file;
+    long size;
+    public StatusImageView addImage(Uri uri) {
+        int index = getImageCount();
+        setImageCount(index + 1);
+        StatusImageView imageView = (StatusImageView)getChildAt(index);
+        try {
+            imageView.setImageBitmap(MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), uri));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return imageView;
+    }
+
+
+    public void removeImage(int index) {
+        StatusImageView view = (StatusImageView)getChildAt(index);
+        setImageCount(imageCount - 1);
+        removeView(view);
+        addView(view);
+        view.setImageTag(0);
+        view.setImageBitmap(null);
+        view.setClickable(false);
+        requestLayout();
+        invalidate();
+    }
+
+    public StatusImageView replaceImage(int index, Uri newImageUri) {
+        StatusImageView imageView = (StatusImageView)getChildAt(index);
+        try {
+            imageView.setImageBitmap(MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), newImageUri));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return imageView;
     }
 
     @Override

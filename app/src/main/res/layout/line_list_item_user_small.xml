@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.jordoncheng.smweibo.views.StatusAvatarImageView
+    <com.example.jordoncheng.weiboclient_mvp.view.widget.StatusAvatarImageView
         android:id="@+id/line_list_item_avatar_on_small"
         android:layout_width="@dimen/list_item_retweeted_avatar_height"
         android:layout_height="@dimen/list_item_retweeted_avatar_height"

@@ -4,32 +4,37 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/list_item_element_spacing_half">
 
-    <com.jordoncheng.smweibo.models.InteractIcon
+    <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
         android:id="@+id/line_edit_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/list_item_element_spacing_half"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:src="@mipmap/ic_image_black_24dp"
         android:onClick="getImage"/>
 
-    <com.jordoncheng.smweibo.models.InteractIcon
+    <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/list_item_element_spacing_half"
-        android:layout_toRightOf="@id/line_edit_image"
-        android:src="@mipmap/ic_at_24dp"
-        android:onClick="getAt"/>
+        android:layout_toEndOf="@id/line_edit_image"
+        android:src="@mipmap/ic_at_24dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/comment_button"
-        android:layout_width="@dimen/home_avatar_height"
-        android:layout_height="@dimen/list_item_avatar_height_half"
+    <TextView
+        android:id="@+id/line_edit_char_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_margin="@dimen/list_item_element_spacing_half"
-        android:layout_alignParentRight="true"
-        android:text="@string/button_comment"
-        android:textColor="?attr/listItemContent"
-        android:background="@drawable/button_comment"
-        android:onClick="post"/>
+        android:layout_toStartOf="@id/line_edit_send"
+        android:textSize="@dimen/list_item_text_size"/>
+
+    <com.example.jordoncheng.weiboclient_mvp.view.widget.InteractIcon
+        android:id="@+id/line_edit_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_element_spacing_half"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/ic_send_black_24dp"/>
 
 </RelativeLayout>
